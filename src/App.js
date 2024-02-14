@@ -20,14 +20,14 @@ const App = () => {
   }, [])
 
   const readCat = () => {
-    fetch("http://localhost:3000/cats")
+    fetch("https://persian-playhouse.onrender.com/cats")
       .then((response) => response.json())
       .then((data) => setCats(data))
       .catch((error) => console.log(("Cat read errors:", error)))
   }
 
   const createCat = (cat) => {
-    fetch("http://localhost:3000/cats", {
+    fetch("https://persian-playhouse.onrender.com/cats", {
       body: JSON.stringify(cat),
       headers: {
         "Content-Type": "application/json"
